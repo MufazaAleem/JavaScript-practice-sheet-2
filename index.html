@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Task 1: Filter Even Numbers
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var evenNumbers = [];
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                evenNumbers.push(numbers[i]);
+            }
+        }
+        console.log("Even Numbers:", evenNumbers);
+
+        // Task 2: Sum of Odd Numbers
+        var numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var sum = 0;
+        for (var i = 0; i < numbers2.length; i++) {
+            if (numbers2[i] % 2 !== 0) {
+                sum += numbers2[i];
+            }
+        }
+        console.log("Sum of Odd Numbers:", sum);
+
+        // Task 3: FizzBuzz
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+
+        // Task 4: Count Characters
+        var words = ["apple", "banana", "cherry"];
+        var totalCharacters = 0;
+        for (var i = 0; i < words.length; i++) {
+            totalCharacters += words[i].length;
+        }
+        console.log("Total Number of Characters:", totalCharacters);
+
+        // Task 5: Find Maximum Length Word
+        var words2 = ["apple", "banana", "cherry"];
+        var maxLengthWord = "";
+        for (var i = 0; i < words2.length; i++) {
+            if (words2[i].length > maxLengthWord.length) {
+                maxLengthWord = words2[i];
+            }
+        }
+        console.log("Word with Maximum Length:", maxLengthWord);
+
+        // Task 6: Remove Short Words
+        var words3 = ["apple", "banana", "cherry", "a", "to"];
+        var filteredWords = [];
+        for (var i = 0; i < words3.length; i++) {
+            if (words3[i].length >= 3) {
+                filteredWords.push(words3[i]);
+            }
+        }
+        console.log("Words with at least 3 characters:", filteredWords);
+
+        // Task 7: Multiplication table
+        var userNumber = parseInt(prompt("Enter a number:"));
+        for (var i = 1; i <= 10; i++) {
+            console.log(userNumber + " x " + i + " = " + (userNumber * i));
+        }
+
+        // Task 8: Array Sorting
+        var numbers3 = [5, 3, 7, 1, 2, 8, 4];
+        for (var i = 0; i < numbers3.length; i++) {
+            for (var j = 0; j < numbers3.length - 1; j++) {
+                if (numbers3[j] > numbers3[j + 1]) {
+                    var temp = numbers3[j];
+                    numbers3[j] = numbers3[j + 1];
+                    numbers3[j + 1] = temp;
+                }
+            }
+        }
+        console.log("Sorted Numbers:", numbers3);
+
+        // Task 9: Search and Replace
+        var strings = ["apple", "banana", "cherry"];
+        var searchWord = prompt("Enter a word to search:");
+        var replaceWord = prompt("Enter a word to replace:");
+        for (var i = 0; i < strings.length; i++) {
+            if (strings[i] === searchWord) {
+                strings[i] = replaceWord;
+            }
+        }
+        console.log("Updated Array:", strings);
+
+        // Task 10: Unique Values
+        var numbers4 = [1, 2, 2, 3, 4, 4, 5, 6];
+        var uniqueValues = [];
+        for (var i = 0; i < numbers4.length; i++) {
+            if (numbers4.indexOf(numbers4[i]) === numbers4.lastIndexOf(numbers4[i])) {
+                uniqueValues.push(numbers4[i]);
+            }
+        }
+        console.log("Unique Values:", uniqueValues);
+    </script>
+</head>
+<body>
+</body>
+</html>
